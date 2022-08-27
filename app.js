@@ -131,5 +131,6 @@
 const request = require('request')
 const url = 'http://api.weatherapi.com/v1/forecast.json?key=acb6d2fc87b54ee29ea173703222708&q=London&days=1&aqi=no&alerts=no'
 request({ url: url, json: true }, (error, response)  => { 
-    console.log('We are at ' + response.body.location.name + 'and quiet cold here with ' + response.body.current.temp_c + 'c degree and ' + response.body.current.condition.text + ' weather ')
+     console.log('We are at ' + response.body.location.name + 'and quiet cold here with ' + response.body.current.temp_c + 'c degree and ' + response.body.current.condition.text + ' weather ')
+     console.log('its a great ' + response.body.location.country + ' ' + response.body.location.region + ' ' + response.body.location.tz_id )
 })
